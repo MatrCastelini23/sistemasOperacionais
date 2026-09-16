@@ -5,12 +5,10 @@ import './index.css'
 function App() {
 
   return (
-    <>
-      <div className="min-h-screen flex flex-col">
-        <Rotas />
-      </div>
+    <div className="min-h-screen flex flex-col bg-zinc-100 dark:bg-black text-black dark:text-zinc-100 transition-colors">
+      <Rotas />
       <Analytics />
-    </>
+    </div>
   )
 }
 

@@ -38,8 +38,8 @@ export const Portifolio = () => {
                                 key={item.key}
                                 onClick={() => navigate(`/portifolio/${item.key}`)}
                                 className={`px-5 py-2 rounded-full font-mono text-sm border transition-colors ${isActive
-                                    ? "border-zinc-100 text-zinc-100 bg-zinc-900"
-                                    : "border-zinc-800 text-zinc-500 hover:text-zinc-300 hover:border-zinc-700"
+                                    ? "border-black dark:border-zinc-100 bg-zinc-200 dark:bg-zinc-900"
+                                    : "border-zinc-300 dark:border-zinc-800 opacity-60 hover:opacity-100 hover:bg-zinc-200 dark:hover:bg-zinc-900"
                                     }`}
                             >
                                 {item.label}

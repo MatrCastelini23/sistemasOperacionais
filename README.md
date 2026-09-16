@@ -1,5 +1,5 @@
 # Projeto sobre Sistemas Operacionais
-
+> https://sistemas-operacionais-jet.vercel.app/
 ## Contexto: 
 Este repositório tem como finalidade trabalhar os hooks do React-Router-Dom para navegação dentro de um SPA. O tema é livre, então, escolhi fazer um pequeno estudo sobre os Sistemas Operacionais Windows, Linux e Mac. <br> A página home possui uma pequena apresentação e um card para prós e contras. <br> A pagina portifólio possui as informações e fontes da pesquisa de cada OS. <br> Em Quem Sou Eu temos uma pequena apresentação minha e na página de Contatos, alguns contatos meus.
 
@@ -20,4 +20,4 @@ Para estilização do projeto utilizei:
 - Lucide-React para icones da página
 
 ## Idéias:
-Pretendo hospedar esse site na Vercel para fins de portifólio e também trabalhar alguns outros hooks do React para otimização do site como por exemplo o useContext provavelmente para deixar disponivel a opção de tema Claro/Escuro.
+Pretendo trabalhar alguns outros hooks do React para otimização do site como por exemplo o useContext provavelmente para deixar disponivel a opção de tema Claro/Escuro.

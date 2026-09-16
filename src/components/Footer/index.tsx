@@ -16,7 +16,7 @@ export const Footer = () => {
                 <div className="flex flex-wrap items-center justify-center md:justify-end gap-6">
                     <a
                         onClick={() => { navigate("/sobre") }}
-                        className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                        className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors cursor-pointer"
                     >
                         <Link className="w-4 h-4" />
                         Sobre

@@ -10,11 +10,11 @@ export const Contato = () => {
             <Header />
             <main className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="flex flex-col justify-center gap-3">
-                    <p className="font-mono text-xs text-black-500">{NAME}</p>
-                    <h1 className="text-2xl font-semibold text-black-100">
+                    <p className="font-mono text-xs">{NAME}</p>
+                    <h1 className="text-2xl font-semibold">
                         Para entrar em contato comigo:
                     </h1>
-                    <h2 className="text-base text-black-400">
+                    <h2 className="text-base opacity-80">
                         Ou caso se interesse por minhas publicações:
                     </h2>
                 </div>
@@ -22,17 +22,17 @@ export const Contato = () => {
                 <div className="flex flex-col gap-4">
                     <a
                         href={`tel:${PHONE}`}
-                        className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-zinc-300 hover:text-zinc-100 hover:border-zinc-700 transition-colors"
+                        className="flex items-center gap-3 rounded-lg border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm opacity-80 hover:opacity-100 hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors"
                     >
-                        <Phone className="w-4 h-4 text-zinc-400" />
-                        {PHONE}
+                        <Phone className="w-4 h-4" />
+                        WhatsApp
                     </a>
 
                     <a
                         href={`mailto:${EMAIL}`}
-                        className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-zinc-300 hover:text-zinc-100 hover:border-zinc-700 transition-colors"
+                        className="flex items-center gap-3 rounded-lg border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm opacity-80 hover:opacity-100 hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors"
                     >
-                        <Mail className="w-4 h-4 text-zinc-400" />
+                        <Mail className="w-4 h-4" />
                         {EMAIL}
                     </a>
 
@@ -40,9 +40,9 @@ export const Contato = () => {
                         href={GITHUB_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-zinc-300 hover:text-zinc-100 hover:border-zinc-700 transition-colors"
+                        className="flex items-center gap-3 rounded-lg border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm opacity-80 hover:opacity-100 hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors"
                     >
-                        <GitCommitVertical className="w-4 h-4 text-zinc-400" />
+                        <GitCommitVertical className="w-4 h-4" />
                         GitHub
                     </a>
 
@@ -50,9 +50,9 @@ export const Contato = () => {
                         href={LINKDIN}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-zinc-300 hover:text-zinc-100 hover:border-zinc-700 transition-colors"
+                        className="flex items-center gap-3 rounded-lg border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm opacity-80 hover:opacity-100 hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors"
                     >
-                        <Link2 className="w-4 h-4 text-zinc-400" />
+                        <Link2 className="w-4 h-4" />
                         LinkedIn
                     </a>
                 </div>

@@ -13,8 +13,8 @@ export const DATA: Record<OSKey, {
     linux: {
         label: "Linux",
         icon: Terminal,
-        accent: "text-orange-400",
-        border: "border-orange-400",
+        accent: "text-red-700",
+        border: "border-red-700",
         pros: [
             "Código aberto e totalmente gratuito",
             "Customização profunda do sistema",
@@ -30,8 +30,8 @@ export const DATA: Record<OSKey, {
     windows: {
         label: "Windows",
         icon: Monitor,
-        accent: "text-sky-400",
-        border: "border-sky-400",
+        accent: "text-blue-600",
+        border: "border-blue-600",
         pros: [
             "Maior compatibilidade com softwares e jogos",
             "Interface familiar para a maioria dos usuários",
@@ -47,8 +47,8 @@ export const DATA: Record<OSKey, {
     mac: {
         label: "macOS",
         icon: Laptop,
-        accent: "text-zinc-300",
-        border: "border-zinc-300",
+        accent: "text-emerald-700",
+        border: "border-emerald-700",
         pros: [
             "Integração sólida entre hardware e software",
             "Referência em produção de áudio e vídeo",

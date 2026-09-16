@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
-import { Phone, Mail, Link2, GitCommitVertical } from "lucide-react";
+import { MessageCircle, Mail, Link2, GitCommitVertical } from "lucide-react";
 import { NAME, PHONE, EMAIL, GITHUB_URL, LINKDIN } from "../../data/dataSocial";
 
 export const Contato = () => {
@@ -24,7 +24,7 @@ export const Contato = () => {
                         href={PHONE}
                         className="flex items-center gap-3 rounded-lg border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm opacity-80 hover:opacity-100 hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors"
                     >
-                        <Phone className="w-4 h-4" />
+                        <MessageCircle className="w-4 h-4" />
                         WhatsApp
                     </a>
 

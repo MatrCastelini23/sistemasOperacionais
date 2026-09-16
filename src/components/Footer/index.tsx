@@ -1,4 +1,4 @@
-import { GitCommitVertical, Link, Mail, Phone } from "lucide-react";
+import { GitCommitVertical, Link, Mail, MessageCircle } from "lucide-react";
 import { NAME, PHONE, EMAIL, GITHUB_URL } from "../../data/dataSocial";
 import { useNavigate } from "react-router-dom";
 
@@ -22,10 +22,10 @@ export const Footer = () => {
                         Sobre
                     </a>
                     <a
-                        href={`tel:${PHONE}`}
+                        href={PHONE}
                         className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
                     >
-                        <Phone className="w-4 h-4" />
+                        <MessageCircle className="w-4 h-4" />
                         WhatsApp
                     </a>
 
@@ -48,6 +48,6 @@ export const Footer = () => {
                     </a>
                 </div>
             </div>
-        </footer>
+        </footer >
     )
 }

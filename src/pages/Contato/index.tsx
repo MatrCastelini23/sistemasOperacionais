@@ -21,7 +21,7 @@ export const Contato = () => {
 
                 <div className="flex flex-col gap-4">
                     <a
-                        href={`tel:${PHONE}`}
+                        href={PHONE}
                         className="flex items-center gap-3 rounded-lg border border-zinc-300 dark:border-zinc-800 px-4 py-3 text-sm opacity-80 hover:opacity-100 hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors"
                     >
                         <Phone className="w-4 h-4" />

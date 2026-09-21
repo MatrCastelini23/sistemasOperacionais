@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, type ReactNode } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useAnyContext } from "../hooks/useAnyContext";
 
 type Theme = "light" | "dark";
 
@@ -38,11 +39,5 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 }
 
 export function useTheme() {
-    const context = useContext(ThemeContext);
-
-    if (!context) {
-        throw new Error("useTheme precisa estar dentro de um ThemeProvider");
-    }
-
-    return context;
+    return useAnyContext(ThemeContext);
 }

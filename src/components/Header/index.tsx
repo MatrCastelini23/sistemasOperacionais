@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { useTheme } from "../../context/themeContext";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import { useLanguage } from "../../context/languageContext";
 
 const URL_IMG = "/Logo.png"
 
@@ -15,6 +16,7 @@ const NAV_LINKS = [
 export const Header = () => {
     const navigate = useNavigate();
     const { theme, toggleTheme } = useTheme();
+    const { language, toggleLanguage } = useLanguage();
     const [menuOpen, setMenuOpen] = useState(false);
 
     const goTo = (path: string) => {
@@ -47,11 +49,18 @@ export const Header = () => {
 
                 <div className="flex items-center gap-4">
                     <button
-                        className="flex items-center justify-center gap-2 font-mono text-sm text-zinc-300 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer w-[90px]"
+                        className="flex items-center justify-center gap-1 font-mono text-sm text-zinc-300 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer w-[90px]"
                         onClick={toggleTheme}
                     >
                         {theme === "light" ? <Moon className="w-4 h-4 shrink-0" /> : <Sun className="w-4 h-4 shrink-0" />}
                         {theme === "light" ? "Escuro" : "Claro"}
+                    </button>
+
+                    <button
+                        className="flex items-center justify-center gap-1 font-mono text-sm text-zinc-300 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer w-[90px]"
+                        onClick={toggleLanguage}
+                    >
+                        {language === "portuguese" ? "English" : "Português"}
                     </button>
 
                     <button

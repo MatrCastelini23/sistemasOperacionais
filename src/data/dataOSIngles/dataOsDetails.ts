@@ -117,7 +117,7 @@ export const macosInfo: OsDetails = {
     ]
 };
 
-export const osDetailsMap: Record<OSKey, OsDetails> = {
+export const osDetailsMapIngles: Record<OSKey, OsDetails> = {
     linux: linuxInfo,
     windows: windowsInfo,
     mac: macosInfo,

@@ -47,20 +47,23 @@ export const Header = () => {
                     ))}
                 </ul>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 sm:gap-3">
                     <button
-                        className="flex items-center justify-center gap-1 font-mono text-sm text-zinc-300 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer w-[90px]"
-                        onClick={toggleTheme}
+                        className="flex items-center justify-center gap-2 font-mono text-sm text-zinc-300 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer w-10 sm:w-[90px]"
+                        onClick={toggleLanguage}
                     >
-                        {theme === "light" ? <Moon className="w-4 h-4 shrink-0" /> : <Sun className="w-4 h-4 shrink-0" />}
-                        {theme === "light" ? "Escuro" : "Claro"}
+                        <span className="hidden sm:inline">{language === "portuguese" ? "English" : "Português"}</span>
+                        <span className="sm:hidden">{language === "portuguese" ? "EN" : "PT"}</span>
                     </button>
 
                     <button
-                        className="flex items-center justify-center gap-1 font-mono text-sm text-zinc-300 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer w-[90px]"
-                        onClick={toggleLanguage}
+                        className="flex items-center justify-center gap-2 font-mono text-sm text-zinc-300 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer w-10 sm:w-[90px]"
+                        onClick={toggleTheme}
                     >
-                        {language === "portuguese" ? "English" : "Português"}
+                        {theme === "light" ? <Moon className="w-4 h-4 shrink-0" /> : <Sun className="w-4 h-4 shrink-0" />}
+                        <span className="max-sm:hidden">
+                            {theme === "light" ? "Escuro" : "Claro"}
+                        </span>
                     </button>
 
                     <button
@@ -73,22 +76,24 @@ export const Header = () => {
                 </div>
             </nav>
 
-            {menuOpen && (
-                <div className="md:hidden border-t border-zinc-800 bg-zinc-950 px-6 py-4">
-                    <ul className="flex flex-col gap-4 list-none">
-                        {NAV_LINKS.map((link) => (
-                            <li key={link.path}>
-                                <button
-                                    className="font-mono text-sm text-zinc-400 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer"
-                                    onClick={() => goTo(link.path)}
-                                >
-                                    {link.label}
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-        </header>
+            {
+                menuOpen && (
+                    <div className="md:hidden border-t border-zinc-800 bg-zinc-950 px-6 py-4">
+                        <ul className="flex flex-col gap-4 list-none">
+                            {NAV_LINKS.map((link) => (
+                                <li key={link.path}>
+                                    <button
+                                        className="font-mono text-sm text-zinc-400 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer"
+                                        onClick={() => goTo(link.path)}
+                                    >
+                                        {link.label}
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )
+            }
+        </header >
     )
 }

@@ -1,10 +1,10 @@
-import { type OsDetails } from "../../data/dataOsDetails";
+import { type OsDetails } from "../../../data/dataOSPortugues/dataOsDetails";
 
 type CardOsProps = {
     os: OsDetails;
 };
 
-export const CardOs = ({ os }: CardOsProps) => {
+export const CardOsPortuguese = ({ os }: CardOsProps) => {
     return (
         <div className="w-full max-w-3xl mx-auto rounded-lg border border-zinc-300 dark:border-zinc-800 bg-zinc-100 dark:bg-black text-black dark:text-zinc-100 shadow-2xl overflow-hidden transition-colors">
             <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-300 dark:border-zinc-800">

@@ -1,15 +1,17 @@
 import { GitCommitVertical, Link, Mail, MessageCircle } from "lucide-react";
-import { NAME, PHONE, EMAIL, GITHUB_URL } from "../../data/dataSocial";
+import { NAME, PHONE, EMAIL, GITHUB_URL } from "../../data/dataSocial/dataSocial";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../../context/languageContext";
 
 export const Footer = () => {
     const navigate = useNavigate();
+    const { language } = useLanguage();
 
     return (
         <footer className="w-full bg-zinc-950 border-t border-zinc-800 mt-auto">
             <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center md:items-center justify-between gap-6">
                 <div className="text-center md:text-left">
-                    <p className="font-mono text-xs text-zinc-500">Developed by</p>
+                    <p className="font-mono text-xs text-zinc-500">{language === "portuguese" ? "Desenvolvido por" : "Developed by"}</p>
                     <p className="text-zinc-100 text-lg font-semibold">{NAME}</p>
                 </div>
 
@@ -19,7 +21,7 @@ export const Footer = () => {
                         className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors cursor-pointer"
                     >
                         <Link className="w-4 h-4" />
-                        Sobre
+                        {language === "portuguese" ? "Sobre" : "About me"}
                     </a>
                     <a
                         href={PHONE}
@@ -34,7 +36,7 @@ export const Footer = () => {
                         className="flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
                     >
                         <Mail className="w-4 h-4" />
-                        {EMAIL}
+                        E-mail
                     </a>
 
                     <a

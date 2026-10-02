@@ -7,10 +7,10 @@ import { useLanguage } from "../../context/languageContext";
 const URL_IMG = "/Logo.png"
 
 const NAV_LINKS = [
-    { path: "/", label: "Home" },
-    { path: "/portifolio", label: "Portifolio" },
-    { path: "/sobre", label: "Quem Sou Eu" },
-    { path: "/contato", label: "Contato" },
+    { path: "/", labelPortugues: "Página Inicial", labelEnglish: "Home" },
+    { path: "/portifolio", labelPortugues: "Portfolio", labelEnglish: "Portfolio" },
+    { path: "/sobre", labelPortugues: "Quem Sou Eu", labelEnglish: "Who I Am" },
+    { path: "/contato", labelPortugues: "Contato", labelEnglish: "Contact me" },
 ]
 
 export const Header = () => {
@@ -41,7 +41,7 @@ export const Header = () => {
                                 className="font-mono text-sm text-zinc-400 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer"
                                 onClick={() => goTo(link.path)}
                             >
-                                {link.label}
+                                {language === "portuguese" ? link.labelPortugues : link.labelEnglish}
                             </button>
                         </li>
                     ))}
@@ -62,7 +62,10 @@ export const Header = () => {
                     >
                         {theme === "light" ? <Moon className="w-4 h-4 shrink-0" /> : <Sun className="w-4 h-4 shrink-0" />}
                         <span className="max-sm:hidden">
-                            {theme === "light" ? "Escuro" : "Claro"}
+                            {language === "portuguese" && theme === "light" ? "Escuro" :
+                                language === "english" && theme === "light" ? "Dark" :
+                                    language === "portuguese" && theme === "dark" ? "Claro" :
+                                        "Light"}
                         </span>
                     </button>
 
@@ -86,7 +89,7 @@ export const Header = () => {
                                         className="font-mono text-sm text-zinc-400 hover:text-zinc-100 transition-colors bg-transparent border-none cursor-pointer"
                                         onClick={() => goTo(link.path)}
                                     >
-                                        {link.label}
+                                        {language === "portuguese" ? link.labelPortugues : link.labelEnglish}
                                     </button>
                                 </li>
                             ))}

@@ -1,9 +1,11 @@
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
-import { CardOs } from "../../components/CardOs"
+import { CardOsPortuguese } from "../../components/CardOs/Portugues"
 import { useNavigate, useParams } from "react-router-dom"
-import { osDetailsMap } from "../../data/dataOsDetails"
-import { type OSKey } from "../../data/dataOS"
+import { osDetailsMap } from "../../data/dataOSPortugues/dataOsDetails"
+import { type OSKey } from "../../data/dataOSPortugues/dataOS"
+import { useLanguage } from "../../context/languageContext"
+import { CardOsEnglish } from "../../components/CardOs/Ingles"
 
 const OS_LIST: { key: OSKey; label: string }[] = [
     { key: "linux", label: "Linux" },
@@ -17,6 +19,7 @@ const isOsKey = (value: string | undefined): value is OSKey => {
 
 export const Portifolio = () => {
     const navigate = useNavigate();
+    const { language } = useLanguage();
     const { os } = useParams<{ os: string }>();
 
     const osSelected: OSKey = isOsKey(os) ? os : "linux";
@@ -27,7 +30,7 @@ export const Portifolio = () => {
             <Header />
             <main className="max-w-4xl mx-auto px-6 py-16 flex flex-col gap-10">
                 <div>
-                    <CardOs os={currentOsDetails} />
+                    {language === "portuguese" ? <CardOsPortuguese os={currentOsDetails} /> : <CardOsEnglish />}
                 </div>
 
                 <div className="flex justify-center gap-4">

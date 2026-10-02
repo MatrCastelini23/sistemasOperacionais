@@ -1,7 +1,8 @@
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
 import { MapPinned, Mail, Link2, GitCommitVertical } from "lucide-react"
-import { NAME, EMAIL, LINKDIN, GITHUB_URL } from "../../data/dataSocial"
+import { NAME, EMAIL, LINKDIN, GITHUB_URL } from "../../data/dataSocial/dataSocial"
+import { useLanguage } from "../../context/languageContext"
 
 const STACK = [
     "HTML5",
@@ -16,6 +17,7 @@ const STACK = [
 ]
 
 export const QuemSouEu = () => {
+    const { language } = useLanguage();
 
     return (
         <>
@@ -62,28 +64,50 @@ export const QuemSouEu = () => {
                         </a>
                     </div>
                 </div>
+                {language === "portuguese" ?
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-2xl font-semibold">Olá, meu nome é Matheus</h1>
+                        <h2 className="text-base opacity-80">Moro em Umuarama - PR</h2>
+                        <p className="text-sm opacity-90 leading-relaxed">
+                            Estou atualmente estudando Sistemas para Internet na UniAlfa. O curso é
+                            focado no desenvolvimento e manutenibilidade de Sistemas Web.
+                        </p>
+                        <h3 className="font-mono text-sm opacity-60 mt-2">
+                            Tenho trabalhado com as tecnologias abaixo:
+                        </h3>
+                        <ul className="flex flex-wrap gap-2">
+                            {STACK.map((tech) => (
+                                <li
+                                    key={tech}
+                                    className="rounded-full border border-zinc-300 dark:border-zinc-800 bg-zinc-200 dark:bg-zinc-900 px-3 py-1 text-xs font-mono opacity-80"
+                                >
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </div> :
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-2xl font-semibold">Hello, my name is Matheus.</h1>
+                        <h2 className="text-base opacity-80">I live in Umuarama, Parana Brazil</h2>
+                        <p className="text-sm opacity-90 leading-relaxed">
+                            I am currently studying Internet Systems at UniAlfa. The program focuses on the development and maintainability of web systems.
+                        </p>
+                        <h3 className="font-mono text-sm opacity-60 mt-2">
+                            I have been working with the following technologies:
+                        </h3>
+                        <ul className="flex flex-wrap gap-2">
+                            {STACK.map((tech) => (
+                                <li
+                                    key={tech}
+                                    className="rounded-full border border-zinc-300 dark:border-zinc-800 bg-zinc-200 dark:bg-zinc-900 px-3 py-1 text-xs font-mono opacity-80"
+                                >
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                }
 
-                <div className="flex flex-col gap-4">
-                    <h1 className="text-2xl font-semibold">Olá, meu nome é Matheus</h1>
-                    <h2 className="text-base opacity-80">Moro em Umuarama - PR</h2>
-                    <p className="text-sm opacity-90 leading-relaxed">
-                        Estou atualmente estudando Sistemas para Internet na UniAlfa. O curso é
-                        focado no desenvolvimento e manutenibilidade de Sistemas Web.
-                    </p>
-                    <h3 className="font-mono text-sm opacity-60 mt-2">
-                        Tenho trabalhado com as tecnologias abaixo:
-                    </h3>
-                    <ul className="flex flex-wrap gap-2">
-                        {STACK.map((tech) => (
-                            <li
-                                key={tech}
-                                className="rounded-full border border-zinc-300 dark:border-zinc-800 bg-zinc-200 dark:bg-zinc-900 px-3 py-1 text-xs font-mono opacity-80"
-                            >
-                                {tech}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
             </main>
             <Footer />
         </>

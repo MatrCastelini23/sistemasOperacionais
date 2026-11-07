@@ -25,7 +25,7 @@ export const QuemSouEu = () => {
             <main className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
                     <img
-                        src="https://lh3.googleusercontent.com/a/ACg8ocK3GrYHMdMRL-Aj7AQJqzlvx-rZE6ZqKvXL5h1E2zd0lgv0jfqBjw=s288-c-no"
+                        src="/perfil.jpg"
                         alt={NAME}
                         className="w-32 h-32 rounded-full border border-zinc-300 dark:border-zinc-800 object-cover"
                     />
